@@ -1,0 +1,4 @@
+- Write MSD / Arhenius tutorials
+- Strip away parts of Polypy to leave the code applicable to this lab course 
+- Rewrite course instructions
+- Create METADISE input file for CaF<sub>2</sub> and write a guide for tweaking this file. 
