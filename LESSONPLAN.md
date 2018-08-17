@@ -10,7 +10,7 @@ Young computational chemists often suffer from "black box syndrome" at the start
 
 #### Lesson Plan
 
--TBC
+- TBC
 
 ##### Assesment 
 
