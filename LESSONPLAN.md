@@ -2,20 +2,23 @@
 
 ### Week 1 - Introduction to Molecular Dynamics
 
-Young computational chemists often suffer from "black box syndrome" at the start of their career as they don't quite grasp what the programs that they use are actually doing. In this course the first week will be dedicated to stripping away the "black box" and giving students an understanding of molecular dynamics simulations. This means that in the subsequent weeks, students will be able to better understand the simulations that they are running.   
+Computational chemistry is often used in undergraduate chemistry as a ``black box''. However, this it likely to reduce student engagement as while the application is clear, the unlying mechanics is not. The first week of the practical will be focused on refreshing material from the second year Introduction to computational chemistry CH20238 lecture module by allowing the students to interact directly with atomistic molecular dynamics simulations using the pylj software [1]. 
 
 #### Learning Outcomes 
 
-- TBC
+- Recognise the *recipe* associated with a molecular dynamics simulation.
+- Understand the concepts of the Lennard-Jones potential and how it can be used in the modeling of atomic particles.
+- Describe the Coulomb potential, and its importance in the modeling of ionic systems.
+- Be able to build a molecular dynamics simulation, using the pylj framework. 
+- Utilise the molecular dynamics simulation that they have built to simulate an system deviating from ideal gas behaviour. 
 
 #### Lesson Plan
 
-- TBC
+The will be a student led workshop where they will (in their own time) be able to work through an interactive Jupyter notebook that will detail the mechanism of atomistic simulation. At the end, the students will use the pylj framework to build a simple molecular dynamics simulation and use this to preform basic simulations. This will involve running simulations at a series of different atomistic densities to reflect on the effect of density on a *typical* ideal gas system.
 
 ##### Assesment 
 
-- Open for debate
-- This week will form the basis for the methodology portion of the students report
+- This week will form the basis for the methodology portion of the students report.
   
 ### Week 2 - Introduction to Transport Properties
 
@@ -77,3 +80,7 @@ It is now common practice to dope a material with different elements in order to
 ### Summary 
 
 Over the 4 weeks the students will transition from a very hands on, teaching focused course to a hands off, research driven course. In weeks 1 and 2 the students will learn the underlying theory behind the practical course and how to carry out MD simulations. In weeks 3 and 4 the students will use this knowledge to design simulations to answer questions common to computational chemists. 
+
+### References
+
+1. McCluskey et al., (2018). pylj: A teaching tool for classical atomistic simulation . Journal of Open Source Education, 1(2), 19, https://doi.org/10.21105/jose.00019
