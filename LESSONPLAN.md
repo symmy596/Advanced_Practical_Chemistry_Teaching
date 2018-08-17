@@ -10,7 +10,7 @@ Computational chemistry is often used in undergraduate chemistry as a "black box
 - Understand the concepts of the Lennard-Jones potential and how it can be used in the modeling of atomic particles.
 - Describe the Coulomb potential, and its importance in the modeling of ionic systems.
 - Be able to build a molecular dynamics simulation, using the pylj framework. 
-- Utilise the molecular dynamics simulation that they have built to simulate an system deviating from ideal gas behaviour. 
+- Utilise the molecular dynamics simulation to study a system deviating from ideal gas behaviour. 
 
 #### Lesson Plan
 
