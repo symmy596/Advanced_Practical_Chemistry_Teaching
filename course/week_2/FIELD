@@ -1,0 +1,17 @@
+surfa___________________________________________________________________________
+UNITS eV
+MOLECULES  2
+CA  CORE
+NUMMOL     256
+atoms       1
+CA            2.0000       2.000    0    0    0
+finish
+F   CORE
+NUMMOL     512
+atoms       1
+F            19.0000      -1.000    0    0    0
+finish
+vdw       2
+CA      F       buck    797.4200      0.3179      0.0000
+F       F       buck   1127.7000      0.2753     15.8300
+CLOSE
