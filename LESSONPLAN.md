@@ -40,21 +40,20 @@ The students will run a molecular dynamics simulation of CaF<sub>2</sub> before 
 
 ### Week 3 - Defect Chemistry
 
-No material is without defects. There are two main types of defect that exist in materials - Frenkel and Schottky defects.
-- Frenkel Defect = Interstitials
-- Schottky Defect = Missing formaula unit  
+As with people, no material is without defects. There are two main types of defect that exist in materials,
+- Frenkel defects -- an atom is displaced in the lattice to an interstitial site; creaing a vacancy,
+- Schottky defects -- a formula unit is missing from the lattice, creating (usually) a pair of vacancies.
 
-In week 3 students will introduce Frenkel and Schottky defects to the CaF<sub>2</sub> configuration from week 2. They will determine how these defects affect the tranpsort properties of the material.
-This will be the first week that does not include tutorials, the students will begin to use what they have learned in the first 2 weeks and begin to design their own simulations.
+Week 3 will see the students introducing Frenkel and Schottky defects to their CaF<sub>2</sub> configurations from the previous week. They will determine the effect that these defects have on the transport properties studied previously. In this week the students are expected to apply the skills that they have learned in Weeks 1 and 2 to design their own simulations.
 
 #### Learning Outcomes
 
-- Understand Frenkel and Schottky defects
+- Undestanding of the nature of Frenkel and Schottky defects.
+- Rationisation of the effect that such defects have on the transport properties of a material.
 
 #### Lesson Plan
 
-- Add cation Frenkel defects to CaF<sub>2</sub> and vary the concentration - How do Frenkel defects affect the transport properties
-- Add Schottky defects to CaF<sub>2</sub> and vary the concentration - How do Schottky defects affect the transport properties.
+This process of this week ultimately lays with the student. However, the expectation is that the students will add cation Frenkel defects to the CaF<sub>2</sub> in different quantities assessing the impact on transport properties. The same will then be conducted with Schottky defects.
 
 #### Assesment
 
