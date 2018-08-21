@@ -48,7 +48,7 @@ Week 3 will see the students introducing Frenkel and Schottky defects to their C
 
 #### Learning Outcomes
 
-- Undestanding of the nature of Frenkel and Schottky defects.
+- Understanding of the nature of Frenkel and Schottky defects.
 - Rationisation of the effect that such defects have on the transport properties of a material.
 
 #### Lesson Plan
@@ -61,23 +61,24 @@ This process of this week ultimately lays with the student. However, the expecta
 
 ### Week 4 - Dopants
 
-It is now common practice to dope a material with different elements in order to improve a desired property. This is particularly common in fuel cell materials, eg Cerium oxide is doped with Gd<sup>3+</sup> cations in order to improve the oxygen transport(and conductivity) of the material - making it a better fuel cell material. In the final week students will investigate how dopant cations affect the transport properties of CaF<sub>2</sub>. Can they find a way to increase the diffusion coefficient?
+The doping of a material with different elements in order to obtain a desired property is now common practice, particularly for fuel cell materials, for example CeO<sub>2</sub> is doped with Gd<sup>3+</sup> to improve the oxygen transport, and therefore conductivity of the material. In this final week, students will investigate how the doping of cations into the CaF<sub>2</sub> structure affects the transport properties. Is it possible to increase the diffusion coefficient over the undoped material.
 
 #### Learning Outcomes
 
-- How do you as a scientist alter the properties of a material?
+- Assess the effect of dopant atoms on the properties of CaF<sub>2</sub>.
+- Understand the role of the computational scienctist in materials discovery and development.
 
 #### Lesson Plan
 
-- Select 4 - 5 cations and add them to CaF<sub>2</sub>.
+As with week three, this process ultimately lays with the student. The expectation is that the student will select four or five relevant cations to add to the CaF<sub>2</sub> structure and determine the diffusion coefficient of each.
 
 #### Assesment
 
-- Key Report Question - How do dopants affect the tranport properties.   
+- Key Report Question - How do dopants affect the tranport properties?   
 
 ### Summary
 
-Over the 4 weeks the students will transition from a very hands on, teaching focused course to a hands off, research driven course. In weeks 1 and 2 the students will learn the underlying theory behind the practical course and how to carry out MD simulations. In weeks 3 and 4 the students will use this knowledge to design simulations to answer questions common to computational chemists.
+Over the 4 weeks, the students will transition from a being lead through and introduction to molecular dynamics and shown how to run molecular simulation to being able to research independently the properties of a material. Week one will focus on the underlaying theory of molecular simulation, week two will introduce the students to the process of running molecular dynamics simulations. While, in weeks three and four the students are expected to independently apply this knowledge to design simulation that answer questions common to computational chemists.
 
 ### References
 
