@@ -1,0 +1,24 @@
+Title_Single-crystal structure of fully dehydrated  zeolite A
+temperature                 1.00000
+pressure                  0.0
+steps                       80000
+equilibration               1000
+timestep                 0.00100000 ps
+scale                1 
+cutoff                  8.6  angstrom
+primary cutoff          8.6 angstrom
+delr                    0.8 angstrom
+print            250  
+rdf              250  
+print rdf
+job time            600000 seconds
+close time             100 seconds
+ewald precision     1d-5
+cap forces            1000.0
+#ensemble   nve
+ensemble   nst hoover  0.1 0.5
+stats           250      
+trajectory  1       250  0
+stack                100     
+shake tolerance  1.d-8
+finish
