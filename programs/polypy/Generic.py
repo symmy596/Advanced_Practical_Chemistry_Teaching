@@ -1,15 +1,3 @@
-import os as os
-import sys as sys
-import numpy as np
-import matplotlib.pyplot as plt
-
-import Generic as ge
-import Read as rd
-import TrajectoryAnalysis as ta
-
-from scipy import stats
-from scipy.constants import codata
-
 def pbc(rnew, rold, vec):
     '''
     pbc - Periodic boundary conditions for an msd calculation
@@ -18,7 +6,7 @@ def pbc(rnew, rold, vec):
     rnew  : Value of current atomic position   : Float
     rold  : Value of previous atomic position  : Float
     vec   : Lattice vector at that timestep    : Float
-    
+
     Return
     ------
     cross  : Result of PBC check - True if atom crosses the boundary   : Bool
@@ -30,35 +18,31 @@ def pbc(rnew, rold, vec):
 
     cross = False
     if shift < 2:
-
         if (rnew - rold) > vec * 0.5:
-            rnew = rnew - vec                    
+            rnew = rnew - vec
             cross = True
-        
         elif -(rnew - rold) > vec * 0.5:
-            rnew = rnew + vec  
+            rnew = rnew + vec
             cross = True
-         
     else:
-        
         if (rnew - rold) > vec * 0.5:
-            rnew = rnew - (vec * shift)                    
+            rnew = rnew - (vec * shift)
             cross = True
-        
         elif -(rnew - rold) > vec * 0.5:
-            rnew = rnew + (vec * shift)  
+            rnew = rnew + (vec * shift)
             cross = True
-    
     return cross, rnew
+
 
 def bin_choose(X, Y):
     '''
-    BinChoose - Calculate the number of bins depending on a box size and a bin thickness
+    BinChoose - Calculate the number of bins depending on a box size and a bin
+    thickness
     Parameters
     ----------
     X  : box length    : Float
     Y  : bin thickness : Float
-             
+
     Return
     ------
     Z  : Number of bins : Float
@@ -68,6 +52,7 @@ def bin_choose(X, Y):
     Z = int(Z)
     Z = Z - 1
     return Z
+
 
 def get_integer(x, y):
     z = x / y
