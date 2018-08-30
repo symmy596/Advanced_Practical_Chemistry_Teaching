@@ -6,7 +6,7 @@ def pbc():
     number_of_particles = 1
     temperature = 100
     box_length = 30
-    number_of_steps = 20000
+    number_of_steps = 10000
     sample_frequency = 25
     # Initialise the system
     system = md.initialise(number_of_particles, temperature, box_length,
