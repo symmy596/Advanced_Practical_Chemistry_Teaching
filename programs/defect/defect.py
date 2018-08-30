@@ -1,5 +1,6 @@
 import numpy as np
 import os
+import random
 
 def read(file):
     cat = []
@@ -17,8 +18,22 @@ def read(file):
     
     return data
 
-def shottky(dataset, atom, concentration):
-    pass
+def schottky(data, concentration):
+    
+    catrem = ( data["Cation"][:,0].size / 100 ) * concentration
+    catrem = int(catrem)
+    anrem = ( data["Anion"][:,0].size / 100 ) * concentration
+    anrem = int(anrem)
+    ar = random.sample(range(0, data["Anion"][:,0].size), anrem)
+    cr = random.sample(range(0, data["Cation"][:,0].size), catrem)
+    
+    ar.sort(key=int)
+    cr.sort(key=int)
+
+    data["Cation"] = np.delete(data["Cation"], cr, 0)
+    data["Anion"] = np.delete(data["Anion"], ar, 0)
+
+    return data
 
 def frenkel(dataset, concentration):
     pass
