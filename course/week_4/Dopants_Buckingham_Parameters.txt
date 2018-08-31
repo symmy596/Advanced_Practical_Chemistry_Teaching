@@ -1,0 +1,43 @@
+K core 1.00  
+  
+Sr core 2.00  
+Ba core 2.00  
+Mn core 2.00  
+Zn core 2.00  
+  
+La core 3.00  
+Ce core 3.00  
+Pr core 3.00  
+Nd core 3.00  
+Sm core 3.00  
+Eu core 3.00  
+Gd core 3.00  
+Tb core 3.00  
+Dy core 3.00  
+Ho core 3.00  
+Er core 3.00  
+Tm core 3.00  
+Yb core 3.00  
+Lu core 3.00  
+  
+K core F core 2674.306 0.28352 0.0 0.0 20.0  
+  
+Sr core F core 2298.500 0.29170 0.0 0.0 20.0  
+Ba core F core 5193.300 0.27980 0.0 0.0 20.0  
+Mn core F core 1654.780 0.27591 0.0 0.0 20.0  
+Zn core F core 1655.530 0.26516 0.0 0.0 20.0  
+  
+La core F core 2817.74 0.2980 0.0 0.0 20.0  
+Ce core F core 2627.13 0.2980 0.0 0.0 20.0  
+Pr core F core 2453.39 0.2980 0.0 0.0 20.0  
+Nd core F core 2488.27 0.2950 0.0 0.0 20.0  
+Sm core F core 1764.57 0.3064 0.0 0.0 20.0  
+Eu core F core 2085.74 0.2950 0.0 0.0 20.0  
+Gd core F core 1667.02 0.3037 0.0 0.0 20.0  
+Tb core F core 1541.15 0.3065 0.0 0.0 20.0  
+Dy core F core 1536.68 0.3037 0.0 0.0 20.0  
+Ho core F core 2590.91 0.2809 0.0 0.0 20.0  
+Er core F core 1880.44 0.2920 0.0 0.0 20.0  
+Tm core F core 1390.19 0.3037 0.0 0.0 20.0  
+Yb core F core 2381.55 0.2808 0.0 0.0 20.0  
+Lu core F core 1448.23 0.2990 0.0 0.0 20.0  
