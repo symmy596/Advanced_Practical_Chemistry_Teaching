@@ -2,4 +2,4 @@
 
 #### Authors
 - Adam Symington
-- ANdrew McCluskey
+- Andrew McCluskey
