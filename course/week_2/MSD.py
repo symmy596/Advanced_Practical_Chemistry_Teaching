@@ -1,7 +1,9 @@
 import numpy as np
-import sys
-import os
+import matplotlib.pyplot as plt
+import os as os
 
+from scipy import stats
+from scipy.constants import codata
 
 def read_history(file, atom):
     '''
@@ -10,7 +12,7 @@ def read_history(file, atom):
     ----------
     file   : HISTORY filename                         : String
     atom   : Atom to be read                          : String
-
+             
     Return
     ------
     data   : trajectories - Atomic trajectories       : Numpy array
@@ -32,16 +34,16 @@ def read_history(file, atom):
             if c == 3:
                 c = 0
                 tstep = False
-            if c < 3 and tstep is True:
+            if c < 3 and tstep == True:
                 lv.append(line.split())
                 c = c + 1
             if name:
                 name = False
-                trajectories.append(line.split())
+                trajectories.append(line.split()) 
             if line[0] == atom[0]:
                 name = True
                 count = count + 1
-            if line[0] == "t":
+            if line[0] =="t":
                 timesteps = timesteps + 1
                 tstep = True
 
@@ -57,18 +59,17 @@ def read_history(file, atom):
             vec = np.append(vec, (lv[i].sum(axis=0)))
 
         lv = np.reshape(vec, (timesteps, 3))
-        data = {'trajectories': trajectories, 'lv': lv, 'timesteps': timesteps,
-                'natoms': natoms}
+        data = {'trajectories':trajectories, 'lv':lv, 'timesteps':timesteps, 'natoms':natoms}
     else:
         print("File cannot be found")
         sys.exit(0)
+    
     if natoms == 0:
-        print("No Atoms of specified type exist within the selected HISTORY "
-              "file")
+        print("No Atoms of specified type exist within the selected HISTORY file")
         sys.exit(0)
-    history.close()
+        
+    history.close() 
     return data
-
 
 def pbc(rnew, rold, vec):
     '''
@@ -78,7 +79,7 @@ def pbc(rnew, rold, vec):
     rnew  : Value of current atomic position   : Float
     rold  : Value of previous atomic position  : Float
     vec   : Lattice vector at that timestep    : Float
-
+    
     Return
     ------
     cross  : Result of PBC check - True if atom crosses the boundary   : Bool
@@ -92,64 +93,64 @@ def pbc(rnew, rold, vec):
     if shift < 2:
 
         if (rnew - rold) > vec * 0.5:
-            rnew = rnew - vec
+            rnew = rnew - vec                    
             cross = True
+        
         elif -(rnew - rold) > vec * 0.5:
-            rnew = rnew + vec
+            rnew = rnew + vec  
             cross = True
+         
     else:
+        
         if (rnew - rold) > vec * 0.5:
-            rnew = rnew - (vec * shift)
+            rnew = rnew - (vec * shift)                    
             cross = True
+        
         elif -(rnew - rold) > vec * 0.5:
-            rnew = rnew + (vec * shift)
+            rnew = rnew + (vec * shift)  
             cross = True
+    
     return cross, rnew
 
-
 def distances(r1, r0):
-    '''
-    Simple subtraction
+    ''' 
+    Simple subtraction 
     Parameters
     ----------
     r1       : numpy object
     r0       : numpy object
-
+    
     Returns
     -------
     distance : Float
     '''
-    return r1 - r0
-
-
+    return r1 - r0 
+    
 def square_distance(distance):
     '''
-    Calculate the MSD for a series of distances
-    Parameters
+    Calculate the MSD for a series of distances 
+    Parameters 
     ----------
     distance : Distance between atomic coordinates     : 2D Numpy object
     n        : 1 = 2D array, 0 = 1D array              : Integer
     Return
     ------
-    msd      : squared displacement                    : Numpy object
+    msd      : squared displacement                    : Numpy object 
     '''
-    return ((distance[:, 0] ** 2) + (distance[:, 1] ** 2) +
-            (distance[:, 2] ** 2))
-
+   
+    return  ((distance[:,0] ** 2) + (distance[:,1] ** 2) + (distance[:,2] ** 2))
 
 def run_msd(data):
     '''
-    MSD calculator - Common to all the various funcitons that do some sort of
-    MSD
+    MSD calculator - Common to all the various funcitons that do some sort of MSD
     Parameters
     ----------
     data          :
     timestep      : Timestep of the simulation          : Integer
-
+            
     Return
     ------
-    msd_data : Dictionary {'msd': msd, 'xmsd': xmsd, 'ymsd': ymsd,
-    'zmsd': zmsd, 'time': time}
+    msd_data : Dictionary {'msd': msd, 'xmsd': xmsd, 'ymsd': ymsd, 'zmsd': zmsd, 'time': time}    
     pmsd     : MSD arrays for every atom          :  1D numpy array
     '''
     timestep = 0.025
@@ -162,36 +163,38 @@ def run_msd(data):
     time = np.array([])
 
     r0 = trajectories[0]
-    rOd = r0
+    rOd = r0 
 
     for j in range(1, data['timesteps']):
+        
         vec = data['lv'][j]
         r1 = trajectories[j]
         distance_new = distances(r1, r0)
         r1.tolist()
-        rOd.tolist()
-        for k in range(0, distance_new[:, 0].size):
+        rOd.tolist()    
+      
+        for k in range(0, distance_new[:,0].size):
             for i in range(0, 3):
-                cross, r_new = pbc(r1[k, i], rOd[k, i], vec[i])
-                if cross:
-                    r1[k, i] = r_new
-                    distance_new[k, i] = r_new - r0[k, i]
+                cross, r_new = pbc(r1[k,i], rOd[k,i], vec[i])
+                if cross == True:
+                    r1[k,i] = r_new
+                    distance_new[k,i] = r_new - r0[k,i]
 
         distance = distance_new
 
         r1 = np.asarray(r1)
         rOd = np.asarray(rOd)
-        rOd = r1
+        rOd = r1    
 
         msd_new = square_distance(distance)
         msd_new = np.average(msd_new)
         msd = np.append(msd, (msd_new))
         time = np.append(time, ((j) * timestep))
 
-        xmsd = np.append(xmsd, (np.average((distance[:, 0] ** 2))))
-        ymsd = np.append(ymsd, (np.average((distance[:, 1] ** 2))))
-        zmsd = np.append(zmsd, (np.average((distance[:, 2] ** 2))))
+        xmsd = np.append(xmsd, (np.average((distance[:,0] ** 2))))
+        ymsd = np.append(ymsd, (np.average((distance[:,1] ** 2))))
+        zmsd = np.append(zmsd, (np.average((distance[:,2] ** 2))))
+        
+        msd_data = {'msd': msd, 'xmsd': xmsd, 'ymsd': ymsd, 'zmsd': zmsd, 'time': time}
 
-        msd_data = {'msd': msd, 'xmsd': xmsd, 'ymsd': ymsd, 'zmsd': zmsd,
-                    'time': time}
     return msd_data

@@ -3,6 +3,15 @@ import os
 import random
 
 def read(file):
+    ''' read - function to read METADISE input file
+    Parameters
+    ----------
+    file - input.txt file
+    
+    Returns
+    -------
+    data - Dictionary containing cation coordinates and anion coordinates
+    '''
     cat = []
     an = []
     f = open(file, "r")
@@ -19,6 +28,16 @@ def read(file):
     return data
 
 def get_cubes(dataset):
+    '''get_cubes - Finds all available interstitial sites in fluorite material
+    
+    Parameters
+    ----------
+    dataset - cation xyz coordinates
+    
+    Returns 
+    -------
+    interstitial - interstitial sites xyz coordinates
+    '''
     xdata = dataset[:,2].astype(float)
     ydata = dataset[:,3].astype(float)
     zdata = dataset[:,4].astype(float)
@@ -36,7 +55,17 @@ def get_cubes(dataset):
     return interstitial 
 
 def schottky(data, concentration):
+    '''schottky - Add schottky defects to the input.txt file
     
+    Parameters
+    ----------
+    data - dictionary of cation and anion coordinates
+    concentration - concentration of schottky defects to be added
+    
+    Returns
+    -------
+    data - new dictionary - containing the schottky defects
+    '''
     catrem = ( data["Cation"][:,0].size / 100 ) * concentration
     catrem = int(catrem)
     anrem = ( data["Anion"][:,0].size / 100 ) * concentration
@@ -53,7 +82,17 @@ def schottky(data, concentration):
     return data
 
 def frenkel(data, concentration, atom):
-
+    '''frenkel - Adds Frenkel defects
+    Parameters
+    ----------
+    data - dictionary of cation and anion coordinates
+    concentration - concentration of schottky defects to be added
+    atom - atom that should be moved to the interstitial. 
+    
+    Returns
+    -------
+    data - new dictionary - containing the schottky defects
+    '''
     cation_sites = get_cubes(data["Cation"])
     catrem = ( cation_sites[:,0].size / 100 ) * concentration
     catrem = int(catrem)
@@ -77,8 +116,19 @@ def frenkel(data, concentration, atom):
     data["Cation"] = np.reshape(data["Cation"], (x, 5))
     return data
         
-def dopant(dataset, atom, charge, concentration):
+def dopant(data, atom, charge, concentration):
+    '''dopant - Adds dopants to structure. 
+    Parameters
+    ----------
+    data - dictionary of cation and anion coordinates
+    atom - atom type to be added. 
+    charge - charge of new atom.
+    concentration - concentration of schottky defects to be added
     
+    Returns
+    -------
+    data - new dictionary - containing dopants
+    '''    
     x = charge - 2.0
     
     p = data["Cation"][:,0].size
@@ -115,6 +165,12 @@ def dopant(dataset, atom, charge, concentration):
     return data
 
 def write_output(data, directory):
+    '''write_output - write out new input.txt file 
+    Parameters
+    ----------
+    data - Dictionary containing cation and anion coordinates
+    directory - directory that should be created for the new file. 
+    '''
     os.mkdir(directory)
     out = str(directory) + "/input.txt" 
     output = open(out, "w")
