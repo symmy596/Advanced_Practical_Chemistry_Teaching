@@ -1,11 +1,6 @@
 # Week 2
-
-Input files for week 2
-
-CONFIG - DL_POLY structure file for CaF<sub>2</sub>
   
-FIELD - DL_POLY force field file - containing a CaF<sub>2</sub> buckingham potential
-  
-CONTROL - DL_POLY simulation parameter file
-  
-input.txt - METADISE input file for CaF<sub>2</sub>
+Instructions for week 2 of third year advanced labs. Contained within this repository folder are the following files
+- Week_2.ipynb - Instructions for the second week. 
+- MSD.py - Mean squared displacement python code. 
+- Input/input.txt - METADISE input file. 
