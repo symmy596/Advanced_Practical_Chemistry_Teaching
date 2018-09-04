@@ -776,8 +776,8 @@ BASI
 ends
 potential
 species
-Ca 2.0 Ca2+
-F -1.0 F-
+Ca 2.0 40.078
+F -1.0 18.99
 ends
 Buckingham
 Ca F 797.42 0.3179 0.0 0.0 20.0
