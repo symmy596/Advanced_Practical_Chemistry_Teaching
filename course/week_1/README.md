@@ -4,7 +4,7 @@
 
 This week will involve a general introduction to molecular dynamics simulations, focusing on making use of the Python programming skills that you first met in years 1 and 2 of your chemistry degree. It may be the case that you cannot reckon particular aspects of Python, if this is the case you are advised to investigate the links within the Jupyter notebook or alternatively look back on the exercises from first and second year.
 
-Before we can start, it is necessary to build the appropriate environment for to perform this exercise. To do this, first open the *Anaconda Prompt* (Start Menu -> Anaconda -> Anaconda 3), and type the following (each new line incidates that your should be pressing enter):
+Before we can start, it is necessary to build the appropriate environment for to perform this exercise. To do this, first open the *Anaconda Prompt* (Start Menu -> Anaconda 2 -> Anaconda Prompt), and type the following (each new line incidates that your should be pressing enter):
 
 ```
 conda create -n adv_lab python
