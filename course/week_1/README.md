@@ -34,6 +34,8 @@ You can now launch the Jupyter notebook from this command line by typing
 jupyter notebook
 ```
 
+The first notebook that you should open is that entitled `week_1.ipynb`. 
+
 ## Authors
 
 - Andrew R. McCluskey
