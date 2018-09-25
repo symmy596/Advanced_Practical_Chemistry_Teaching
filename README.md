@@ -1,8 +1,8 @@
-# Advanced Chemistry Practical -- Computational
+# Advanced Chemistry Practical - Computational
 ## University of Bath, Department of Chemistry
 ### 2018-2019
 
-Welcome to the advanced chemistry practical -- computational. In this four week practical you will:
+Welcome to the advanced chemistry practical - computational. In this four week practical you will:
 
 - Be introduced to the concept of molecular dynamics simulations and build your own,
 - Use molecular dynamics to simulate the phase diagram of a near-ideal two-dimensional gas,
