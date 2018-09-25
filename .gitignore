@@ -1,0 +1,6 @@
+.ipynb_check*
+*/.ipynb_check*
+*/*/.ipynb_check*
+introductions
+course/week_1/__pycache__
+course/week_1/START_HERE_completed.ipynb
