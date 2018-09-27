@@ -153,7 +153,7 @@ def run_msd(data):
     msd_data : Dictionary {'msd': msd, 'xmsd': xmsd, 'ymsd': ymsd, 'zmsd': zmsd, 'time': time}    
     pmsd     : MSD arrays for every atom          :  1D numpy array
     '''
-    timestep = 0.025
+    timestep = 0.01
     trajectories = np.split(data['trajectories'], data['timesteps'])
     trajectories = np.asarray(trajectories)
     msd = np.array([])
