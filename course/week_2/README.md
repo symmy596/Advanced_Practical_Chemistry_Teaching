@@ -1,6 +1,10 @@
-# Week 2
-  
-Instructions for week 2 of third year advanced labs. Contained within this repository folder are the following files
-- Week_2.ipynb - Instructions for the second week. 
-- MSD.py - Mean squared displacement python code. 
-- Input/input.txt - METADISE input file. 
+# Advanced Chemistry Practical - Computational
+## University of Bath, Department of Chemistry
+### Week 1
+
+This week will involve an introduction to computational modelling for solid state chemistry, focusing on the transport properties of Ca$F_2$. The notebook explaining this weeks exercise is entitled `week_2.ipynb`. It is a short introduction to solid state chemistry and will give you the tools needed to progress. 
+
+## Authors
+
+- Andrew R. McCluskey
+- Adam R. Symmington
