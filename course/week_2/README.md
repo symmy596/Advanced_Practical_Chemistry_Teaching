@@ -2,7 +2,7 @@
 ## University of Bath, Department of Chemistry
 ### Week 1
 
-This week will involve an introduction to computational modelling for solid state chemistry, focusing on the transport properties of Ca$F_2$. The notebook explaining this weeks exercise is entitled `week_2.ipynb`. It is a short introduction to solid state chemistry and will give you the tools needed to progress. 
+This week will involve an introduction to computational modelling for solid state chemistry, focusing on the transport properties of calcium fluoride. The notebook explaining this weeks exercise is entitled `week_2.ipynb`. It is a short introduction to solid state chemistry and will give you the tools needed to progress. 
 
 ## Authors
 
