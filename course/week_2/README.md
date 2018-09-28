@@ -6,6 +6,6 @@ This week will involve an introduction to computational modelling for solid stat
 
 ## Authors
 
-- Adam R. Symmington
+- Adam R. Symington
 - Andrew R. McCluskey
 
