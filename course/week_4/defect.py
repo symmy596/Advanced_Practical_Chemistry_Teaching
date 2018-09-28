@@ -164,13 +164,22 @@ def dopant(data, atom, charge, concentration):
     
     return data
 
-def write_output(data, directory):
+def write_output(data, directory, defect):
     '''write_output - write out new input.txt file 
     Parameters
     ----------
     data - Dictionary containing cation and anion coordinates
     directory - directory that should be created for the new file. 
     '''
+    defect_charge = {"K": "1.0", "Sr": "2.0", "Ba": "2.0", "Mn": "2.0", "Zn": "2.0", "La": "3.0", "Ce": "3.0", "Pr": "3.0", "Nd": "3.0", "Sm": "3.0", "Eu": "3.0", "Gd": "3.0", "Tb": "3.0", "Dy": "3.0", "Ho": "3.0", "Er": "3.0", "Tm": "3.0", "Yb": "3.0", "Lu": "3.0"}
+    
+    A = {"K": "2674.306", "Sr": "2298.500", "Ba": "5193.300", "Mn": "1654.780", "Zn": "1655.530", "La": "2817.74", "Ce": "2627.13", "Pr": "2453.39", "Nd": "2488.27", "Sm": "1764.57", "Eu": "2085.74", "Gd": "1667.02", "Tb": "1541.15", "Dy": "1536.68", "Ho": "2590.91", "Er": "1880.44", "Tm": "1390.19", "Yb": "2381.55", "Lu": "1448.23"}
+    
+    p = {"K": "0.28352", "Sr": "0.29170", "Ba": "0.27980", "Mn": "0.27591", "Zn": "0.26516 ", "La": "0.2980", "Ce": "0.2980", "Pr": "0.2980", "Nd": "0.2950", "Sm": "0.3064", "Eu": "0.2950", "Gd": "0.3037", "Tb": "0.3065", "Dy": "0.3037", "Ho": "0.2809", "Er": "0.2920 ", "Tm": "0.3037", "Yb": "0.2808", "Lu": "0.2990"}
+
+    Charge = defect_charge[defect]
+    A_param = A[defect]
+    p_param = p[defect]
     os.mkdir(directory)
     out = str(directory) + "/input.txt" 
     output = open(out, "w")
@@ -190,11 +199,13 @@ def write_output(data, directory):
     output.write("potential\n")
     output.write("species\n")
     output.write("Ca core 2,0\n")
+    output.write(defect + " " + "core" + " " + Charge + "\n")
     output.write("F core -1.0\n")
     
     output.write("ends\n")
     output.write("Buckingham\n")
     output.write("Ca F 797.42 0.3179 0.0 0.0 20.0\n")
+    output.write(defect + " " + " F " + A_param + " " + p_param + " 0.0 0.0 20.0 " + "\n")
     output.write("F  F 1127.7 0.2753 15.83 0.0 20.0\n")
 
     output.write("ends\n")
