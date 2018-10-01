@@ -11,4 +11,4 @@ Welcome to the advanced chemistry practical - computational. In this four week p
 
 All of the required materials are available on this webpage, except from the executable version of the molecular dynamics software DLPOLY, which can be downloaded from [here](https://people.bath.ac.uk/chsscp/teach/adv.bho/progs.zip). You should then download the material on this webpage, using the green *Clone or download* button in the upper right and selecting *Download ZIP*. Both of these downloads will be ZIP files, you should extract them both and put the contents somewhere sensible in your H: drive.
 
-Once you have downloaded and unzipped the material, please go to [`course/week_1`](https://github.com/symmy596/Advanced_Practical_Chemistry_Teaching/tree/master/course/week_1).  
+Once you have downloaded and unzipped the material, please go to [`Week_1`](https://github.com/symmy596/Advanced_Practical_Chemistry_Teaching/tree/master/Week_1).  
