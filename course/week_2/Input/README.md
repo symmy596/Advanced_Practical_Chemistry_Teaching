@@ -1,1 +1,0 @@
-## METADSE input file
