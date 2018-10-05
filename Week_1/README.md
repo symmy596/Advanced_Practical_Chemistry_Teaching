@@ -38,7 +38,7 @@ jupyter notebook
 
 The first notebook that you should open is that entitled `week_1.ipynb`. 
 
-The notebook will launch in your C drive. This is unfortunate because your C drive will automatically wipe when you log off. So make sure you save the repo elshewhere before you log off. Hopefully BUC will fix this issue in the coming days.
+The notebook will launch in your C drive. This is unfortunate because your C drive will automatically wipe when you log off. So make sure you save the repo elsewhere before you log off. Hopefully BUCS will fix this issue in the coming days.
 
 ## Authors
 
