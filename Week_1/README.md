@@ -18,15 +18,17 @@ You have just build a [conda environment](https://conda.io/docs/user-guide/tasks
 activate adv_lab
 ```
 
-You should now see the pharse `(adv_lab)` preceeding the line on which you are typing. Finally we must install two programs:
+You should now see the pharse `(adv_lab)` preceeding the line on which you are typing. Finally we must install three programs:
 
 ```
 pip install pylj
 
 conda install nb_conda
+
+conda install -c anaconda scipy
 ```
 
-On the second installation you may be asked if you would like to *proceed*, once again press `y` and enter.
+On the second installation you may be asked if you would like to *proceed*, once again press `y` and enter. You may also be asked for admin credentials, decline. 
 
 You can now launch the Jupyter notebook from this command line by typing
 
@@ -35,6 +37,8 @@ jupyter notebook
 ```
 
 The first notebook that you should open is that entitled `week_1.ipynb`. 
+
+The notebook will launch in your C drive. This is unfortunate because your C drive will automatically wipe when you log off. So make sure you save the repo elshewhere before you log off. Hopefully BUC will fix this issue in the coming days.
 
 ## Authors
 
