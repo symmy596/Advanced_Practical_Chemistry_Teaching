@@ -13,5 +13,4 @@ All of the required materials are available on this webpage, except from the exe
 
 Once you have downloaded and unzipped the material, please go to [`Week_1`](https://github.com/symmy596/Advanced_Practical_Chemistry_Teaching/tree/master/Week_1).  
 
-<a href="https://zenodo.org/badge/latestdoi/119863480">
-<img src="https://zenodo.org/badge/119863480.svg" alt="DOI" />
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1475176.svg)](https://doi.org/10.5281/zenodo.1475176)
